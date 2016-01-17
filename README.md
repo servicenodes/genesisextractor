@@ -9,4 +9,16 @@ Win (32bit): http://www.spreadcoin.info/downloads/genesis-extractor.zip
 
 <h1><u><b>Quick Guide:</b></u></h1>
 
-![Alt text](docs/pics/screenshot0.jpg "Genesis Extractor Screen 1 - Overview")
+![Alt text](docs/pics/screenshot0.jpg "Genesis Extractor Screen 0 - Overview")
+
+![Alt text](docs/pics/screenshot1.jpg "Genesis Extractor Screen 0 - Overview")
+
+![Alt text](docs/pics/screenshot2.jpg "Genesis Extractor Screen 0 - Overview")
+
+![Alt text](docs/pics/screenshot3.jpg "Genesis Extractor Screen 0 - Overview")
+
+![Alt text](docs/pics/screenshot4.jpg "Genesis Extractor Screen 0 - Overview")
+
+![Alt text](docs/pics/screenshot5.jpg "Genesis Extractor Screen 0 - Overview")
+
+![Alt text](docs/pics/screenshot6.jpg "Genesis Extractor Screen 0 - Overview")

@@ -31,7 +31,7 @@ You can now click "START EXTRACTION" to start the tool.
 Please note that during the extraction operation you might see external windows appear and disappear.
 And it's possible that your firewall will ask you if you wont to open the port that the coin is accessing.
 
-<b>You don't need to open any port, since the extraction-tool will recognize what port the coin is trying to use, even when said port is closed.<b><br>
+<b>You don't need to open any port, since the extraction-tool will recognize what port the coin is trying to use, even when said port is closed.<b><br><br>
 ![Alt text](docs/pics/screenshot3b.jpg "Genesis Extractor Screen 0 - Overview")
 
 ![Alt text](docs/pics/screenshot4.jpg "Genesis Extractor Screen 0 - Overview")

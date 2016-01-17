@@ -29,7 +29,7 @@ You can now click "START EXTRACTION" to start the tool.
 ![Alt text](docs/pics/screenshot3.jpg "Genesis Extractor Screen 0 - Overview")
 
 Please note that during the extraction operation you might see external windows appear and disappear.
-<b>Don't interfere with this process.<br> Any process/window that is opened will also be closed later.<br><br>
+<b>Don't interfere with this process.<br><br>Any process/window that is opened will also be closed automatically later.<br><br>
 
 And it's possible that your firewall will ask you if you want to open the port that the coin is accessing.
 

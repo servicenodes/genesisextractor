@@ -17,7 +17,7 @@ For the tool to be able to process daemons, it requires that you put atleast one
 
 ![Alt text](docs/pics/screenshot1.jpg "Genesis Extractor Screen 0 - Overview")
 
-You can add any daemon you like, and if you can't find a daemon you can try with the qt-wallet.exe.<br>
+You can add any daemon you like, and if you can't find a daemon for the coin of your choice you can try with the qt-wallet.exe.<br>
 (Note: some coins come with a few external dll's they make use of. They simply won't work correctly without those external dll's).
 
 ![Alt text](docs/pics/screenshot2.jpg "Genesis Extractor Screen 0 - Overview")

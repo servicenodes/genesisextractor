@@ -9,9 +9,16 @@ Win (32bit): http://www.spreadcoin.info/downloads/genesis-extractor.zip
 
 <h1><u><b>Quick Guide:</b></u></h1>
 
+Unpack the zip-file somewhere. Click on GenesisExtractor.exe to start the tool.
+
 ![Alt text](docs/pics/screenshot0.jpg "Genesis Extractor Screen 0 - Overview")
 
+For the tool to be able to process daemons, it requires that you put atleast one altcoin-daemon in the /daemons folder.
+
 ![Alt text](docs/pics/screenshot1.jpg "Genesis Extractor Screen 0 - Overview")
+
+You can add any daemon you like, and if you can't find a daemon you can try with the qt-wallet.exe.
+(Note: some coins will require that you move them with some dll's they make use of. They simply won't work correctly without those external dll's).
 
 ![Alt text](docs/pics/screenshot2.jpg "Genesis Extractor Screen 0 - Overview")
 

@@ -33,7 +33,7 @@ Please note that during the extraction operation you might see external windows 
 
 And it's possible that your firewall will ask you if you want to open the port that the coin is accessing.
 
-<b>You don't need to open any port, since the extraction-tool will recognize what port the coin is trying to use, even when said port is closed.<b>
+<b>You don't need to open any port, since the extraction-tool will recognize what port the coin is trying to use, even when said port is closed.</b>
 
 ![Alt text](docs/pics/screenshot3b.jpg "Genesis Extractor Screen 0 - Overview")
 

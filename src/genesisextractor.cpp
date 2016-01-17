@@ -25,9 +25,6 @@ GenesisExtractor::GenesisExtractor(QWidget *parent) :
     status(STATUS::QUEUE_IDLE),
     datadir(QDir::currentPath() + "\\temp")
 {
-    //qDebug() << STATUS::STOPPED;
-    //qDebug() << STATUS::KILLED;
-
     ui->setupUi(this);
 
     daemon = initializeDaemonList(getAvailableDaemons());//available_daemons);
@@ -43,15 +40,6 @@ GenesisExtractor::GenesisExtractor(QWidget *parent) :
 
 GenesisExtractor::~GenesisExtractor()
 {
-    // clearTempFolder();
-
-    //stopEverything();
-
-    /*delete exec;
-    delete exec2;
-
-    delete watcher;*/
-
     delete ui;
 }
 
@@ -153,15 +141,12 @@ void GenesisExtractor::continueQueue()
     if(status == STATUS::QUEUE_STARTED){
         QString file = QDir::currentPath() + "\\daemons\\" + daemon[index].name;
 
-        //exec = new QProcess(this);
-
         disconnect(&exec,SIGNAL(started()),0,0);
         disconnect(&exec,SIGNAL(finished(int)),0,0);
 
         connect(&exec,SIGNAL(started()), this, SLOT(exec_started()));
         connect(&exec,SIGNAL(finished(int)), this, SLOT(exec_killed()));
 
-        //exec->start(file,  QStringList() << QString("-datadir="+datadir) << "-daemon" << "-rpcuser=123" << "-rpcpassword=456");
         exec.start(file,  QStringList() << QString("-datadir="+datadir) << "-daemon=0" << "-listen=1" << "-rpcuser=123" << "-rpcpassword=456");
     }
 }
@@ -170,9 +155,7 @@ void GenesisExtractor::stopEverything()
 {
     qDebug() << status << "stopEverything()";
 
-    //ui->startButton->setEnabled(false);
     status = STATUS::QUEUE_STOPPED;
-
 
     ui->plainTextEdit_2->appendPlainText("> Queue stopped!");
 
@@ -195,8 +178,6 @@ void GenesisExtractor::stopEverything()
 void GenesisExtractor::closeEvent(QCloseEvent *)
 {
     qDebug() << "close clicked";
-    //stopEverything();
-
 }
 
 void GenesisExtractor::exec_started()
@@ -213,9 +194,7 @@ void GenesisExtractor::exec_started()
         ui->plainTextEdit_2->appendPlainText("> Process with PID " + QString::number(exec.processId()) + " started.");
         qDebug() << "process started" << exec.processId() << exec.program();
 
-        //watcher = new QFileSystemWatcher(this);
         watcher.addPath(datadir);
-        //disconnect(watcher, SIGNAL(directoryChanged(QString)),0,0);
         connect(&watcher, SIGNAL(directoryChanged(QString)), this, SLOT(blockDataCreated()));
     }
 }
@@ -224,11 +203,8 @@ void GenesisExtractor::exec_killed()
 {
     qDebug() << status << "exec_killed()";
     ui->startButton->setEnabled(true);
-    //status = 0;
 
-    //clearTempFolder();
     ui->plainTextEdit_2->appendPlainText("> Process with PID " + QString::number(pid) + " killed.");
-
 }
 
 void GenesisExtractor::blockDataCreated()
@@ -330,8 +306,6 @@ void GenesisExtractor::scanPortUsed()
         updateDaemonList(index, QString::number(pid), "", "Trying Connection...");
         updateTreeView();
 
-        //exec2 = new QProcess(this);
-
         disconnect(&exec2,SIGNAL(started()),0,0);
         disconnect(&exec2,SIGNAL(finished(int)),0,0);
 
@@ -353,8 +327,6 @@ void GenesisExtractor::netstat_killed()
     if(status == STATUS::PORT_TRY){
         ui->plainTextEdit_2->appendPlainText("> Port-Scan finished...");
         QString result = exec2.readAll().toStdString().c_str();
-        qDebug() << result;
-        qDebug() << "before port.splitting";
         if(result.length() > 0){
             status = STATUS::PORT_SUCCESS;
             port = result.split(":")[1].split(" ")[0];
@@ -365,11 +337,9 @@ void GenesisExtractor::netstat_killed()
             //ExplorerID; DaemonName; MagicBytes; MerkleRoot; Date of Creation; Port;
             ui->plainTextEdit->appendPlainText(QString(magic_bytes+hex_time+";"+daemon[index].name.split(".exe")[0]+";"+magic_bytes+";"+merkle_root+";"+genesisblock_time+";"+port+";"));
 
-            qDebug() << "before cleanUp()";
             cleanUp();
         } else{
 
-            //status = 6;
             ui->plainTextEdit_2->appendPlainText("> Port-Scan retry...");
 
             delay(1000);
@@ -410,7 +380,6 @@ void GenesisExtractor::cleanUp()
 
         if(index <daemon.length()-1){
             index ++;
-            //QModelIndex index = model->index(0, 0, QModelIndex());
             ui->treeView->scrollTo(model->index(index, 0, QModelIndex()));
             status = STATUS::QUEUE_STARTED;
             continueQueue();

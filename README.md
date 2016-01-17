@@ -37,7 +37,8 @@ And it's possible that your firewall will ask you if you want to open the port t
 
 ![Alt text](docs/pics/screenshot3b.jpg "Genesis Extractor Screen 0 - Overview")
 
-BTW: All daemons will be forced to create their blockchain data in the folder /temp that comes with the genesis extractor:
+BTW: All daemons will be forced to create their blockchain data in the folder /temp that comes with the genesis extractor.<br>
+So there will be no polution of your harddisk with all kinds of folders.
 
 ![Alt text](docs/pics/screenshot4.jpg "Genesis Extractor Screen 0 - Overview")
 

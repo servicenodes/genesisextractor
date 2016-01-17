@@ -37,8 +37,17 @@ And it's possible that your firewall will ask you if you want to open the port t
 
 ![Alt text](docs/pics/screenshot3b.jpg "Genesis Extractor Screen 0 - Overview")
 
+BTW: All daemons will be forced to create their blockchain data in the folder /temp that comes with the genesis extractor:
+
 ![Alt text](docs/pics/screenshot4.jpg "Genesis Extractor Screen 0 - Overview")
+
+Now the tool is processing one daemon after the other, until the queue is finished (all jobs are done) or something unexpected happens, like one of the daemons you are trying to use is non-standard and can't be used with this tool.<br>
+If you encounter a non-standard daemon please tell us about it here: http://spreadcointalk.org/index.php?topic=732.0
 
 ![Alt text](docs/pics/screenshot5.jpg "Genesis Extractor Screen 0 - Overview")
 
+Once all jobs are finished, you can copy/paste the data into our forum: http://spreadcointalk.org/index.php?topic=733.0
+
 ![Alt text](docs/pics/screenshot6.jpg "Genesis Extractor Screen 0 - Overview")
+
+Have fun!

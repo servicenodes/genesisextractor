@@ -23,6 +23,7 @@ You can add any daemon you like, and if you can't find a daemon you can try with
 ![Alt text](docs/pics/screenshot2.jpg "Genesis Extractor Screen 0 - Overview")
 
 Once there are daemons to process, they will appear in the "Available Daemons" list. <br>
+(You might need to restart the tool to rescan for daemons you just added).<br><br>
 You can now click "START EXTRACTION" to start the tool.
 
 ![Alt text](docs/pics/screenshot3.jpg "Genesis Extractor Screen 0 - Overview")

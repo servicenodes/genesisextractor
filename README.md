@@ -27,6 +27,8 @@ You can now click "START EXTRACTION" to start the tool.
 
 ![Alt text](docs/pics/screenshot3.jpg "Genesis Extractor Screen 0 - Overview")
 
+![Alt text](docs/pics/screenshot3b.jpg "Genesis Extractor Screen 0 - Overview")
+
 ![Alt text](docs/pics/screenshot4.jpg "Genesis Extractor Screen 0 - Overview")
 
 ![Alt text](docs/pics/screenshot5.jpg "Genesis Extractor Screen 0 - Overview")
